@@ -50,7 +50,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun ResultScreenPreview() {
     MarsPhotosTheme {
-        ResultScreen(stringResource(R.string.placeholder_result))
+        MarsPhotosApp()
     }
 }
 
