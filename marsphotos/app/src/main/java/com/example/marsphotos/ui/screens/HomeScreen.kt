@@ -17,6 +17,9 @@ package com.example.marsphotos.ui.screens
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.ui.res.painterResource
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.padding
 import androidx.compose.ui.unit.dp
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.Image
@@ -51,8 +54,17 @@ fun HomeScreen(
 }
 
 @Composable
-fun ErrorScreen(modifier: Modifier) {
-
+fun ErrorScreen(modifier: Modifier = Modifier) {
+    Column(
+        modifier = modifier,
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Image(
+            painter = painterResource(id = R.drawable.ic_connection_error), contentDescription = ""
+        )
+        Text(text = stringResource(R.string.loading_failed), modifier = Modifier.padding(16.dp))
+    }
 }
 
 @Composable
